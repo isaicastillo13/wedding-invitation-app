@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-[10px] uppercase tracking-[0.5em] opacity-80"
         >
-          Are getting married
+          Un sí para toda la vida
         </motion.p>
 
         <motion.h1
