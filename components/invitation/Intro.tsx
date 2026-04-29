@@ -42,8 +42,14 @@ export default function Intro() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.35, duration: 0.7 }}
-          className="mx-auto mt-10 h-px w-24 bg-wedding-primary/50"
-        />
+          className="mx-auto mt-10 w-full max-w-70 overflow-hidden  bg-wedding-secondary"
+        >
+          <img
+            src="/images/DSC02547.jpg"
+            alt="Yasmin y George"
+            className="h-90 w-full object-cover saturate-75 brightness-95"
+          />
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 18 }}

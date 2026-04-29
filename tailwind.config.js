@@ -8,12 +8,12 @@ content: [
     extend: {
       colors: {
         wedding: {
-          primary: "#CCB9AC",
-          secondary: "#D8C9BA",
-          accent: "#E5D1D8",
-          light: "#F5F5F5",
+          primary: "#997b6f",
+          secondary: "#b69a8e",
+          accent: "#d3c1b5",
+          light: "#ede4dd",
           warm: "#E1DBCE",
-          dark: "#2B2923",
+          dark: "#2f2520",
         },
       },
     },

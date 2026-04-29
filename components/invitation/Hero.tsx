@@ -8,7 +8,7 @@ export default function Hero() {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 1.2 }}
-  className="flex h-full flex-col items-center justify-center px-6 text-center text-wedding-light"
+  className="flex h-full flex-col items-center justify-center text-center text-wedding-light"
 >   
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background */}
@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="mt-12 rounded-full border border-white/60 bg-white/10 px-10 py-3 text-[11px] uppercase tracking-[0.4em] text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:scale-105"
+          className="mt-12 border border-white/60 bg-white/10 px-10 py-3 text-[11px] uppercase tracking-[0.4em] text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:scale-105"
         >
           RSVP
         </motion.a>
