@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 export default function RSVP() {
   return (
     <section id="rsvp" className="bg-wedding-warm px-6 py-20 text-wedding-dark">
+      
       <div className="mx-auto max-w-md text-center">
+         <img
+            src="/images/DSC02597.jpg"
+            alt="Yasmin y George"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}

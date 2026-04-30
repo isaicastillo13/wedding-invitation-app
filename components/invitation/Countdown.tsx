@@ -50,9 +50,9 @@ export default function Countdown() {
                 #Yas&George
               </p>
 
-              <h2 className="mt-28 font-serif text-4xl leading-tight text-white">
+              {/* <h2 className="mt-8 font-serif text-4xl leading-tight text-white">
                 Faltan pocos días
-              </h2>
+              </h2> */}
             </div>
 
             <div>
@@ -75,9 +75,9 @@ export default function Countdown() {
               </div>
 
               <div className="mt-8">
-                <p className="font-serif text-5xl italic text-white">
+                {/* <p className="font-serif text-5xl italic text-white">
                   Yasmin & George
-                </p>
+                </p> */}
 
                 <p className="mt-4 text-[10px] uppercase tracking-[0.45em] text-white/75">
                   Are getting married
@@ -85,6 +85,9 @@ export default function Countdown() {
 
                 <p className="mt-3 text-xs uppercase tracking-[0.35em] text-white/70">
                   27 · 06 · 2026
+                </p>
+                <p className="mt-2 text-xs uppercase tracking-[0.35em] text-white/70">
+                  4:30 p.m
                 </p>
               </div>
 
@@ -118,9 +121,9 @@ function CountdownPhoto({
       <div className="absolute inset-0 bg-wedding-accent/15 mix-blend-multiply" />
 
       <div className="absolute inset-x-0 bottom-3 text-center">
-        <p className="font-serif text-5xl font-bold leading-none text-white">
+        <h3 className="text-5xl  leading-none text-white">
           {String(value).padStart(2, "0")}
-        </p>
+        </h3>
         <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-white/80">
           {label}
         </p>

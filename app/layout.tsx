@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pinyon_Script, Quattrocento } from "next/font/google";
+import { Geist, Geist_Mono, Pinyon_Script, Quattrocento, Roboto } from "next/font/google";
 import "./globals.css";
 
 
@@ -13,6 +13,11 @@ const quattrocento = Quattrocento({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-serif",
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pinyon.variable} ${quattrocento.variable} h-full antialiased`}
+      className={`${pinyon.variable} ${quattrocento.variable} ${roboto.variable}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

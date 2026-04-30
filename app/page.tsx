@@ -3,6 +3,7 @@ import Intro from "@/components/invitation/Intro";
 import Countdown from "@/components/invitation/Countdown";
 import EventDetails from "@/components/invitation/EventDetails";
 import RSVP from "@/components/invitation/RSVP";
+import Moments from "@/components/invitation/Moments";
 import Gifts from "@/components/invitation/Gifts";
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Intro />
       <Countdown />
       <EventDetails />
+      <Moments/>
       <RSVP />
       <Gifts />
     </main>
