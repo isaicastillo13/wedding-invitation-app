@@ -55,14 +55,6 @@ export default function EventDetails() {
           >
             Ver ubicación
           </a>
-          <div className="mx-auto mb-6 max-w-65 opacity-80">
-            <img
-              src="/images/DSC02684RB.png"
-              alt="Hotel Central"
-              className="w-full object-contain"
-            />
-          </div>
-         
           <div className="mt-10 bg-wedding-secondary/40 px-6 py-5 text-center">
             <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
               Recomendación
@@ -73,6 +65,37 @@ export default function EventDetails() {
               Uber.
             </p>
           </div>
+          <div className="mx-auto mb-6 max-w-65 opacity-80">
+           <div className="mt-10 text-center">
+            {/* Imagen ilustración */}
+
+            {/* Texto */}
+            <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
+              Dress Code
+            </p>
+
+            <p className="mt-2 font-serif text-lg text-wedding-dark">
+              Formal
+            </p>
+            <div className="mx-auto mb-6 max-w-65 opacity-80">
+              <img
+                src="/images/DSC02684RB.png"
+                alt="Hotel Central"
+                className="w-full object-contain"
+              />
+            </div>
+
+            <a
+            href="https://maps.google.com"
+            target="_blank"
+            className="mt-10 block bg-wedding-primary px-8 py-4 text-center text-[11px] uppercase tracking-[0.3em] text-white transition hover:opacity-90"
+          >
+            Inspo
+          </a>
+          </div>
+          </div>
+         
+          
         </div>
       </div>
     </section>
