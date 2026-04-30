@@ -4,14 +4,10 @@ import { motion } from "framer-motion";
 
 export default function RSVP() {
   return (
-    <section id="rsvp" className="bg-wedding-warm px-6 py-20 text-wedding-dark">
+    <section id="rsvp" className="bg-wedding-warm px-6 py-20 text-wedding-dark/75">
       
       <div className="mx-auto max-w-md text-center">
-         <img
-            src="/images/DSC02597.jpg"
-            alt="Yasmin y George"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+        
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,12 +45,7 @@ export default function RSVP() {
           transition={{ delay: 0.35 }}
           className="mt-10 space-y-4 text-left"
         >
-          <input
-            type="text"
-            placeholder="Nombre completo"
-            className="w-full rounded-full border border-wedding-primary/30 bg-white/70 px-5 py-4 text-sm outline-none placeholder:text-wedding-dark/40 focus:border-wedding-primary"
-          />
-
+          
           <select className="w-full rounded-full border border-wedding-primary/30 bg-white/70 px-5 py-4 text-sm outline-none focus:border-wedding-primary">
             <option>¿Asistirás?</option>
             <option>Sí, asistiré</option>
@@ -67,11 +58,7 @@ export default function RSVP() {
             className="w-full rounded-full border border-wedding-primary/30 bg-white/70 px-5 py-4 text-sm outline-none placeholder:text-wedding-dark/40 focus:border-wedding-primary"
           />
 
-          <textarea
-            placeholder="Mensaje para los novios"
-            rows={4}
-            className="w-full rounded-3xl border border-wedding-primary/30 bg-white/70 px-5 py-4 text-sm outline-none placeholder:text-wedding-dark/40 focus:border-wedding-primary"
-          />
+        
 
           <button
             type="button"
