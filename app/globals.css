@@ -6,7 +6,9 @@
   --color-wedding-accent: #d3c1b5;
   --color-wedding-light: #ede4dd;
   --color-wedding-warm: #E1DBCE;
-  --color-wedding-dark: #2f2520;
+  --color-wedding-dark: #2a2220;
+  --font-script: var(--font-script);
+  --font-serif: var(--font-serif);
 }
 
 html {
@@ -16,4 +18,12 @@ html {
 body {
   background: var(--color-wedding-light);
   color: var(--color-wedding-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-script);
+}
+
+p, span, a, li {
+  font-family: var(--font-serif);
 }

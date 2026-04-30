@@ -13,7 +13,7 @@ content: [
           accent: "#d3c1b5",
           light: "#ede4dd",
           warm: "#E1DBCE",
-          dark: "#2f2520",
+          dark: "#2a2220",
         },
       },
     },

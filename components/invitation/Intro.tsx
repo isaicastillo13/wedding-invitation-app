@@ -21,7 +21,7 @@ export default function Intro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15, duration: 0.7 }}
-          className="mt-5 font-serif text-4xl leading-tight"
+          className="mt-5 font-serif text-4xl leading-tight text-wedding-dark"
         >
           Nuestro amor <br /> llega al altar
         </motion.h2>
