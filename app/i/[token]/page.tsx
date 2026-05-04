@@ -10,12 +10,12 @@ import Closing from "@/components/invitation/Closing";
 export default async function InvitationPage({
   params,
 }: {
-  params: { token: string };
+  params: Promise<{ token: string }>;
 }) {
+  const { token } = await params;
+
   const guest = await prisma.guest.findUnique({
-    where: {
-      token: params.token,
-    },
+    where: { token },
   });
 
   if (!guest) {
@@ -33,11 +33,11 @@ export default async function InvitationPage({
 
   return (
     <main>
-      <Hero />
+      <Hero/>
       <Intro />
       <Countdown />
       <EventDetails />
-      <RSVP />
+      <RSVP guest={guest} />
       <Gifts />
       <Closing />
     </main>
