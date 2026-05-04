@@ -5,6 +5,7 @@ import EventDetails from "@/components/invitation/EventDetails";
 import RSVP from "@/components/invitation/RSVP";
 import Moments from "@/components/invitation/Moments";
 import Gifts from "@/components/invitation/Gifts";
+import Closing from "@/components/invitation/Closing";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Moments/>
       <RSVP />
       <Gifts />
+      <Closing />
     </main>
   );
 }

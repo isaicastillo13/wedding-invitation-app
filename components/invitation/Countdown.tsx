@@ -32,19 +32,19 @@ export default function Countdown() {
   }, []);
 
   return (
-    <section className="bg-wedding-light  text-wedding-light">
-      <div className="mx-auto max-w-md overflow-hidden bg-wedding-dark shadow-xl">
-        <div className="relative min-h-170 overflow-hidden">
+    <section className="bg-wedding-light text-wedding-light">
+      <div className="max-w-md mx-auto overflow-hidden shadow-xl bg-wedding-dark">
+        <div className="relative overflow-hidden min-h-170">
           <img
             src="/images/DSC02597.jpg"
             alt="Yasmin y George"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 object-cover w-full h-full"
           />
 
           <div className="absolute inset-0 bg-linear-to-b from-black/55 via-black/35 to-black/70" />
           <div className="absolute inset-0 bg-wedding-primary/20 mix-blend-multiply" />
 
-          <div className="relative z-10 flex min-h-170 flex-col justify-between px-6 py-8 text-center">
+          <div className="relative z-10 flex flex-col justify-between px-6 py-8 text-center min-h-170">
             <div>
               <p className="text-[10px] uppercase tracking-[0.45em] text-white/80">
                 #Yas&George
@@ -91,11 +91,11 @@ export default function Countdown() {
                 </p>
               </div>
 
-              <div className="mx-auto mt-6 w-fit rounded-full border border-white/40 bg-white/10 px-5 py-2 backdrop-blur-md">
+              {/* <div className="px-5 py-2 mx-auto mt-6 border rounded-full w-fit border-white/40 bg-white/10 backdrop-blur-md">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/80">
                   {String(timeLeft.seconds).padStart(2, "0")} segundos
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -115,13 +115,13 @@ function CountdownPhoto({
 }) {
   return (
     <div className="relative h-40 overflow-hidden bg-wedding-primary">
-      <img src={image} alt={label} className="h-full w-full object-cover" />
+      <img src={image} alt={label} className="object-cover w-full h-full" />
 
       <div className="absolute inset-0 bg-black/25" />
       <div className="absolute inset-0 bg-wedding-accent/15 mix-blend-multiply" />
 
-      <div className="absolute inset-x-0 bottom-3 text-center">
-        <h3 className="text-5xl  leading-none text-white">
+      <div className="absolute inset-x-0 text-center bottom-3">
+        <h3 className="text-5xl leading-none text-white">
           {String(value).padStart(2, "0")}
         </h3>
         <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-white/80">
