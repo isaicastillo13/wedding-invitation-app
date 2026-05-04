@@ -31,9 +31,20 @@ export default async function InvitationPage({
     );
   }
 
+  if (!guest.hasOpened) {
+    await prisma.guest.update({
+      where: { id: guest.id },
+      data: {
+        hasOpened: true,
+        openedAt: new Date(),
+        status: "opened",
+      },
+    });
+  }
+
   return (
     <main>
-      <Hero/>
+      <Hero />
       <Intro />
       <Countdown />
       <EventDetails />
