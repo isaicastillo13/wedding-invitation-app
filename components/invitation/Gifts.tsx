@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Gift, Landmark, Smartphone } from "lucide-react";
+import { useState } from "react";
 
 export default function Gifts() {
   return (
-    <section className="bg-wedding-light py-20 text-wedding-dark">
-      <div className="mx-auto max-w-md text-center">
+    <section className="pt-20 bg-wedding-light text-wedding-dark">
+      <div className="max-w-md mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,17 +25,18 @@ export default function Gifts() {
         >
           Tu presencia es <br /> nuestro mejor regalo
         </motion.h2>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.35, duration: 0.7 }}
-          className="mx-auto mt-10 w-full max-w-70 overflow-hidden  bg-wedding-secondary"
+          className="w-full mx-auto mt-10 overflow-hidden max-w-70 bg-wedding-secondary"
         >
           <img
             src="/images/DSC02682.jpg"
             alt="Yasmin y George"
-            className="h-90 w-full object-cover saturate-75 brightness-95"
+            className="object-cover w-full h-90 saturate-75 brightness-95"
           />
         </motion.div>
 
@@ -44,64 +45,76 @@ export default function Gifts() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.25 }}
-          className="mx-auto mt-6 max-w-sm text-sm leading-7 text-wedding-dark/70 px-6"
+          className="max-w-sm px-6 mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
         >
           Pero si deseas hacernos un obsequio, agradecemos muestras de cariño en
           efectivo o a través de:
         </motion.p>
 
-        <div className="mt-10 text-left overflow-hidden">
-          <GiftCard
-            icon={<Landmark />}
-            title="Cuenta bancaria"
-            lines={[
-              "George Salazar o Yasmin Caicedo",
-              "Banco General",
-              "Cuenta de ahorros",
-              "04-29-96-361672-0",
-            ]}
-          />
+        <div className="mt-10 space-y-5 text-left">
+          <GiftCard title="Cuenta bancaria">
+            <p>George Salazar o Yasmin Caicedo</p>
+            <p>Banco General</p>
+            <p>Cuenta de ahorros</p>
 
-          <GiftCard
-            icon={<Smartphone />}
-            title="Yappy"
-            lines={["6265-3819", "George Salazar", "Yasmin por definir"]}
-          />
+            <CopyButton
+              value="04-29-96-361672-0"
+              label="Copiar número de cuenta"
+            />
+          </GiftCard>
+
+          <GiftCard title="Yappy">
+            <p>6265-3819</p>
+            <p>George Salazar</p>
+
+            <CopyButton value="6265-3819" label="Copiar Yappy" />
+          </GiftCard>
         </div>
       </div>
     </section>
   );
 }
 
+function CopyButton({ value, label }: { value: string; label: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(value);
+    setCopied(true);
+
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      className="w-full px-5 py-3 mt-4 text-xs tracking-wide text-center transition border border-wedding-light/50 bg-wedding-light text-wedding-dark hover:bg-wedding-accent"
+    >
+      {copied ? "Copiado ✓" : label}
+    </button>
+  );
+}
+
 function GiftCard({
-  icon,
   title,
-  lines,
+  children,
 }: {
-  icon: React.ReactNode;
   title: string;
-  lines: string[];
+  children: React.ReactNode;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className=" bg-wedding-primary p-6 shadow-sm"
+      className="p-6 bg-wedding-primary text-wedding-light"
     >
-      <div className="mb-5 flex items-center gap-3">
-        <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-light font-bold">
-          {title}
-        </p>
-      </div>
+      <p className="text-[10px] uppercase tracking-[0.35em] font-bold">
+        {title}
+      </p>
 
-      <div className="space-y-2">
-        {lines.map((line) => (
-          <p key={line} className="text-sm leading-6 text-wedding-light">
-            {line}
-          </p>
-        ))}
-      </div>
+      <div className="mt-5 space-y-2 text-sm leading-6">{children}</div>
     </motion.div>
   );
 }

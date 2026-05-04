@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Closing() {
   return (
-    <section className="px-6 py-24 text-center bg-wedding-light text-wedding-dark">
+    <section className="px-6 py-6 text-center bg-wedding-light text-wedding-dark">
       <div className="max-w-md mx-auto">
         {/* Línea decorativa */}
         <motion.div
