@@ -18,8 +18,6 @@ export default function RSVP({ guest }: { guest: any }) {
           RSVP
         </motion.p>
 
-       
-
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,34 +29,25 @@ export default function RSVP({ guest }: { guest: any }) {
           confirmar asistencia antes del 28 de mayo.
         </motion.p>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.25 }}
-          className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
+          className="max-w-sm mx-auto mt-6 text-center text-wedding-dark/70"
         >
-          Hemos reservado para usted <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="mt-4 font-serif text-4xl leading-tight"
-        >
-            {guest.passes} Puesto(s)
-        </motion.h2>
-        {/* <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.25 }}
-          className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
-        >
-          {guest.name}
-        </motion.p> */}
-        
-        </motion.p>
+          <p className="text-sm leading-7">Hemos reservado para usted</p>
 
+          {guest && (
+            <h2 className="mt-3 font-serif text-4xl leading-tight text-wedding-dark">
+              {guest.passes}
+            </h2>
+          )}
+
+          <p className="mt-2 text-sm leading-7">
+            {guest?.passes === 1 ? "Puesto" : "Puestos"}
+          </p>
+        </motion.div>
         <motion.form
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
