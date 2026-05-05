@@ -6,6 +6,7 @@ import EventDetails from "@/components/invitation/EventDetails";
 import RSVP from "@/components/invitation/RSVP";
 import Gifts from "@/components/invitation/Gifts";
 import Closing from "@/components/invitation/Closing";
+import Moments from "@/components/invitation/Moments";
 
 export default async function InvitationPage({
   params,
@@ -46,11 +47,11 @@ export default async function InvitationPage({
     <main>
       <Hero />
       <Intro />
-      <Countdown />
       <EventDetails />
+      <Moments />
       <RSVP guest={guest} />
       <Gifts />
-      <Closing />
+      <Countdown />
     </main>
   );
 }

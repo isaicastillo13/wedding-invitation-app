@@ -5,26 +5,26 @@ import { motion } from "framer-motion";
 
 export default function EventDetails() {
   return (
-    <section className="bg-wedding-light px-6 py-20 text-wedding-dark">
-      <div className="mx-auto max-w-md">
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center text-[10px] uppercase tracking-[0.45em] text-wedding-primary"
-        >
-          Detalles del evento
-        </motion.p>
+    <section className="px-6 py-4 bg-wedding-light text-wedding-dark">
+      <hr className="mx-auto mb-8 h-0.5 w-16 border-0 bg-wedding-primary/60" />
 
+      <div className="max-w-md mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="mt-4 text-center font-serif text-4xl"
+          className="mt-4 font-serif text-4xl text-center"
         >
           Ceremonia religiosa <br /> y recepción
         </motion.h2>
+
+        <p className="mt-8 text-xs uppercase tracking-[0.35em] text-wedding-dark/50 text-center">
+          27 · 06 · 2026
+        </p>
+        <p className="mt-2 text-xs uppercase tracking-[0.35em] text-wedding-dark/50 text-center">
+          4:30 p.m
+        </p>
 
         <div className="mt-10 space-y-4">
           <div className="mt-10 text-center">
@@ -33,7 +33,7 @@ export default function EventDetails() {
               <img
                 src="/images/DSC02683RB.png"
                 alt="Hotel Central"
-                className="w-full object-contain"
+                className="object-contain w-full"
               />
             </div>
 
@@ -46,7 +46,7 @@ export default function EventDetails() {
               Hotel Central
             </p>
 
-            <p className="text-sm text-wedding-dark/70">Salón San José</p>
+            <p className="text-sm text-wedding-dark/70">Casco Antiguo</p>
           </div>
           <a
             href="https://maps.google.com"
@@ -55,7 +55,7 @@ export default function EventDetails() {
           >
             Ver ubicación
           </a>
-          <div className="mt-10 bg-wedding-secondary/40 px-6 py-5 text-center">
+          <div className="px-6 py-5 mt-10 text-center bg-wedding-secondary/40">
             <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
               Recomendación
             </p>
@@ -66,36 +66,34 @@ export default function EventDetails() {
             </p>
           </div>
           <div className="mx-auto mb-6 max-w-65 opacity-80">
-           <div className="mt-10 text-center">
-            {/* Imagen ilustración */}
+            <div className="mt-10 text-center">
+              {/* Imagen ilustración */}
 
-            {/* Texto */}
-            <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
-              Dress Code
-            </p>
+              {/* Texto */}
+              <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
+                Dress Code
+              </p>
 
-            <p className="mt-2 font-serif text-lg text-wedding-dark">
-              Formal
-            </p>
-            <div className="mx-auto mb-6 max-w-65 opacity-80">
-              <img
-                src="/images/DSC02684RB.png"
-                alt="Hotel Central"
-                className="w-full object-contain"
-              />
+              <p className="mt-2 font-serif text-lg text-wedding-dark">
+                Formal
+              </p>
+                <div className="mx-auto mb-6 max-w-65 opacity-80">
+                  <img
+                    src="/images/DSC02684RB.png"
+                    alt="Hotel Central"
+                    className="object-contain w-full"
+                  />
+                </div>
+
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                className="mt-10 block bg-wedding-primary px-8 py-4 text-center text-[11px] uppercase tracking-[0.3em] text-white transition hover:opacity-90"
+              >
+                Inspo
+              </a>
             </div>
-
-            <a
-            href="https://maps.google.com"
-            target="_blank"
-            className="mt-10 block bg-wedding-primary px-8 py-4 text-center text-[11px] uppercase tracking-[0.3em] text-white transition hover:opacity-90"
-          >
-            Inspo
-          </a>
           </div>
-          </div>
-         
-          
         </div>
       </div>
     </section>
@@ -103,8 +101,8 @@ export default function EventDetails() {
 }
 
 // return (
-//   <div className="flex gap-4 rounded-3xl bg-white/60 p-5 shadow-sm">
-//     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-wedding-accent text-wedding-dark">
+//   <div className="flex gap-4 p-5 shadow-sm rounded-3xl bg-white/60">
+//     <div className="flex items-center justify-center w-10 h-10 rounded-full shrink-0 bg-wedding-accent text-wedding-dark">
 //       {icon}
 //     </div>
 

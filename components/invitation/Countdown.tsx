@@ -56,19 +56,22 @@ export default function Countdown() {
             </div>
 
             <div>
+              <p className=" text-[10px] uppercase tracking-[0.45em] text-white/75">
+                  Falta poco para el gran día
+                </p>
               <div className="grid grid-cols-3 gap-3">
                 <CountdownPhoto
-                  image="/images/DSC02561.jpg"
+                  // image="/images/DSC02561.jpg"
                   value={timeLeft.days}
                   label="Días"
                 />
                 <CountdownPhoto
-                  image="/images/DSC02573.jpg"
+                  // image="/images/DSC02573.jpg"
                   value={timeLeft.hours}
                   label="Horas"
                 />
                 <CountdownPhoto
-                  image="/images/DSC02575.jpg"
+                  // image="/images/DSC02575.jpg"
                   value={timeLeft.minutes}
                   label="Min"
                 />
@@ -79,16 +82,14 @@ export default function Countdown() {
                   Yasmin & George
                 </p> */}
 
-                <p className="mt-4 text-[10px] uppercase tracking-[0.45em] text-white/75">
-                  Are getting married
-                </p>
+                
 
-                <p className="mt-3 text-xs uppercase tracking-[0.35em] text-white/70">
+                {/* <p className="mt-3 text-xs uppercase tracking-[0.35em] text-white/70">
                   27 · 06 · 2026
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.35em] text-white/70">
                   4:30 p.m
-                </p>
+                </p> */}
               </div>
 
               {/* <div className="px-5 py-2 mx-auto mt-6 border rounded-full w-fit border-white/40 bg-white/10 backdrop-blur-md">
@@ -105,20 +106,20 @@ export default function Countdown() {
 }
 
 function CountdownPhoto({
-  image,
+  // image,
   value,
   label,
 }: {
-  image: string;
+  // image: string;
   value: number;
   label: string;
 }) {
   return (
-    <div className="relative h-40 overflow-hidden bg-wedding-primary">
-      <img src={image} alt={label} className="object-cover w-full h-full" />
+    <div className="relative h-40 overflow-hidden">
+      {/* <img src={image} alt={label} className="object-cover w-full h-full" /> */}
 
-      <div className="absolute inset-0 bg-black/25" />
-      <div className="absolute inset-0 bg-wedding-accent/15 mix-blend-multiply" />
+      {/* <div className="absolute inset-0 bg-black/25" /> */}
+      {/* <div className="absolute inset-0 bg-wedding-accent/15 mix-blend-multiply" /> */}
 
       <div className="absolute inset-x-0 text-center bottom-3">
         <h3 className="text-5xl leading-none text-white">

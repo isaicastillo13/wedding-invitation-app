@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pinyon_Script, Quattrocento, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Pinyon_Script, Quattrocento, Roboto, Marcellus } from "next/font/google";
 import "./globals.css";
 
 
@@ -9,11 +9,12 @@ const pinyon = Pinyon_Script({
   variable: "--font-script",
 });
 
-const quattrocento = Quattrocento({
+const marcellus = Marcellus({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: "400",
   variable: "--font-serif",
 });
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -33,9 +34,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pinyon.variable} ${quattrocento.variable} ${roboto.variable}  h-full antialiased`}
+      className={`${pinyon.variable} ${marcellus.variable} ${roboto.variable}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex flex-col min-h-full">{children}</body>
     </html>
   );
 }

@@ -6,27 +6,19 @@ export default function RSVP({ guest }: { guest: any }) {
   return (
     <section
       id="rsvp"
-      className="px-6 py-20 bg-wedding-warm text-wedding-dark/75"
+      className="px-6 py-8 bg-wedding-warm text-wedding-dark/75"
     >
       <div className="max-w-md mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[10px] uppercase tracking-[0.45em] text-wedding-primary"
+          className="text-2xl uppercase tracking-[0.45em] text-wedding-primary"
         >
-          Confirma tu asistencia
+          RSVP
         </motion.p>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="mt-4 font-serif text-4xl leading-tight"
-        >
-          Nos encantará <br /> verte ahí
-        </motion.h2>
+       
 
         <motion.p
           initial={{ opacity: 0, y: 18 }}
@@ -36,7 +28,7 @@ export default function RSVP({ guest }: { guest: any }) {
           className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
         >
           Con mucha ilusión esperamos contar con su presencia. Por favor
-          confirmar asistencia antes del 27 de mayo.
+          confirmar asistencia antes del 28 de mayo.
         </motion.p>
 
         <motion.p
@@ -46,16 +38,16 @@ export default function RSVP({ guest }: { guest: any }) {
           transition={{ delay: 0.25 }}
           className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
         >
-          Esta initacion es valida para <motion.h2
+          Hemos reservado para usted <motion.h2
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
           className="mt-4 font-serif text-4xl leading-tight"
         >
-            {guest.passes} persona(s)
+            {guest.passes} Puesto(s)
         </motion.h2>
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -63,7 +55,7 @@ export default function RSVP({ guest }: { guest: any }) {
           className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
         >
           {guest.name}
-        </motion.p>
+        </motion.p> */}
         
         </motion.p>
 
