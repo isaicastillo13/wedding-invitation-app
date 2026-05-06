@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function EventDetails() {
   return (
-    <section className="px-6 py-4 bg-wedding-light text-wedding-dark">
+    <section className="px-6 py-4 bg-wedding-light text-wedding-dark/75">
       <hr className="mx-auto mb-8 h-0.5 w-16 border-0 bg-wedding-primary/60" />
 
       <div className="max-w-md mx-auto">
@@ -19,10 +19,10 @@ export default function EventDetails() {
           Ceremonia religiosa <br /> y recepción
         </motion.h2>
 
-        <p className="mt-8 text-xs uppercase tracking-[0.35em] text-wedding-dark/50 text-center">
+        <p className="mt-8 text-xs uppercase tracking-[0.35em] text-wedding-dark/75 text-center">
           27 · 06 · 2026
         </p>
-        <p className="mt-2 text-xs uppercase tracking-[0.35em] text-wedding-dark/50 text-center">
+        <p className="mt-2 text-xs uppercase tracking-[0.35em] text-wedding-dark/75 text-center">
           4:30 p.m
         </p>
 
@@ -38,11 +38,11 @@ export default function EventDetails() {
             </div>
 
             {/* Texto */}
-            <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/50">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-wedding-dark/70">
               Lugar
             </p>
 
-            <p className="mt-2 font-serif text-lg text-wedding-dark">
+            <p className="mt-2 font-serif text-lg text-wedding-dark/75">
               Hotel Central
             </p>
 
