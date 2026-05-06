@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <section className="flex px-6 py-4 bg-wedding-light text-wedding-dark">
+    <section className="flex px-6 py-4 bg-wedding-light">
       <div className="max-w-md mx-auto text-center ">
         <motion.p
           initial={{ opacity: 0, y: 18 }}
@@ -21,7 +21,7 @@ export default function Intro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15, duration: 0.7 }}
-          className="mt-5 text-4xl leading-tight text-wedding-dark"
+          className="mt-5 text-4xl leading-tight text-wedding-dark/75"
         >
           Nuestro amor <br /> llega al altar
         </motion.h2>
@@ -36,20 +36,6 @@ export default function Intro() {
           Con la bendición de Dios y rodeados del cariño de familiares y amigos,
           queremos invitarlos a celebrar nuestro matrimonio.{" "}
         </motion.p>
-
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.35, duration: 0.7 }}
-          className="w-full mx-auto mt-10 overflow-hidden max-w-70 bg-wedding-secondary"
-        >
-          <img
-            src="/images/DSC02547.jpg"
-            alt="Yasmin y George"
-            className="object-cover w-full h-90 saturate-75 brightness-95"
-          />
-        </motion.div> */}
 
         <motion.h3
           initial={{ opacity: 0, y: 18 }}
