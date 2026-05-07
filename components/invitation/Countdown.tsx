@@ -39,6 +39,7 @@ export default function Countdown() {
             src="/images/DSC02597.jpg"
             alt="Yasmin y George"
             className="absolute inset-0 object-cover w-full h-full"
+            style={{ objectPosition: "75% center" }}
           />
 
           <div className="absolute inset-0 bg-linear-to-b from-black/55 via-black/35 to-black/70" />
@@ -57,8 +58,8 @@ export default function Countdown() {
 
             <div>
               <p className=" text-[10px] uppercase tracking-[0.45em] text-white/75">
-                  Falta poco para el gran día
-                </p>
+                Falta poco para el gran día
+              </p>
               <div className="grid grid-cols-3 gap-3">
                 <CountdownPhoto
                   // image="/images/DSC02561.jpg"
@@ -81,8 +82,6 @@ export default function Countdown() {
                 {/* <p className="font-serif text-5xl italic text-white">
                   Yasmin & George
                 </p> */}
-
-                
 
                 {/* <p className="mt-3 text-xs uppercase tracking-[0.35em] text-white/70">
                   27 · 06 · 2026
