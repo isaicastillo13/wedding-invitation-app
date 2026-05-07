@@ -14,7 +14,7 @@ export default function Hero() {
         {/* Background */}
         <div className="absolute inset-0">
           <img
-            src="/images/DSC02645.jpg"
+            src="/images/DSC02645.JPG"
             alt="Wedding"
             className="object-cover w-full h-full scale-125"
           />

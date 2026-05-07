@@ -36,7 +36,7 @@ export default function Countdown() {
       <div className="max-w-md mx-auto overflow-hidden shadow-xl bg-wedding-dark">
         <div className="relative overflow-hidden min-h-170">
           <img
-            src="/images/DSC02597.jpg"
+            src="/images/DSC02597.JPG"
             alt="Yasmin y George"
             className="absolute inset-0 object-cover w-full h-full"
             style={{ objectPosition: "75% center" }}
@@ -62,17 +62,17 @@ export default function Countdown() {
               </p>
               <div className="grid grid-cols-3 gap-3">
                 <CountdownPhoto
-                  // image="/images/DSC02561.jpg"
+                  // image="/images/DSC02561.JPG"
                   value={timeLeft.days}
                   label="Días"
                 />
                 <CountdownPhoto
-                  // image="/images/DSC02573.jpg"
+                  // image="/images/DSC02573.JPG"
                   value={timeLeft.hours}
                   label="Horas"
                 />
                 <CountdownPhoto
-                  // image="/images/DSC02575.jpg"
+                  // image="/images/DSC02575.JPG"
                   value={timeLeft.minutes}
                   label="Min"
                 />
