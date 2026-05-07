@@ -77,10 +77,13 @@ export async function POST(req: Request) {
       rsvp,
     });
   } catch (error) {
-    console.error(error);
+    console.error("RSVP_ERROR:", error);
 
     return NextResponse.json(
-      { error: "Error guardando RSVP" },
+      {
+        error: "Error guardando RSVP",
+        detail: error instanceof Error ? error.message : String(error),
+      },
       { status: 500 },
     );
   }
