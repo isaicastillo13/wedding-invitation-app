@@ -85,7 +85,7 @@ export default function EventDetails() {
                 </div>
 
               <a
-                href="https://maps.google.com"
+                href="https://pin.it/2g2f10jBR"
                 target="_blank"
                 className="mt-10 block bg-wedding-primary px-8 py-4 text-center text-[11px] uppercase tracking-[0.3em] text-white transition hover:opacity-90"
               >

@@ -85,7 +85,7 @@ export default function RSVP({ guest }: { guest?: any }) {
             className="max-w-sm mx-auto mt-6 text-center text-wedding-dark/70"
           >
             <p className="text-sm leading-7">
-              Hemos reservado para{" "}
+              Hemos reservado para:{" "}
               <span className="font-bold">{guest.name}</span>
             </p>
 
@@ -119,11 +119,22 @@ export default function RSVP({ guest }: { guest?: any }) {
           {isAttending && (
             <input
               type="number"
+              inputMode="numeric"
               placeholder="Cantidad de personas"
               min={1}
               max={guest?.passes || 1}
               value={attendeesCount}
-              onChange={(e) => setAttendeesCount(Number(e.target.value))}
+              onChange={(e) => {
+                let value = Number(e.target.value);
+
+                if (value < 1) value = 1;
+
+                if (value > guest.passes) {
+                  value = guest.passes;
+                }
+
+                setAttendeesCount(value);
+              }}
               className="w-full px-5 py-4 text-sm border outline-none border-wedding-primary/30 bg-white/70 placeholder:text-wedding-dark/40 focus:border-wedding-primary"
             />
           )}
@@ -136,9 +147,7 @@ export default function RSVP({ guest }: { guest?: any }) {
             className="w-full px-5 py-4 text-sm border outline-none resize-none border-wedding-primary/30 bg-white/70 placeholder:text-wedding-dark/40 focus:border-wedding-primary"
           />
 
-          {error && (
-            <p className="text-sm text-center text-red-700">{error}</p>
-          )}
+          {error && <p className="text-sm text-center text-red-700">{error}</p>}
 
           {success && (
             <p className="text-sm text-center text-wedding-dark">
