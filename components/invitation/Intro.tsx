@@ -23,7 +23,7 @@ export default function Intro() {
           transition={{ delay: 0.15, duration: 0.7 }}
           className="mt-5 text-4xl leading-tight text-wedding-dark/75"
         >
-          Nuestro amor <br /> llega al altar
+          Nuestro amor nos <br /> lleva al altar.
         </motion.h2>
 
         <motion.p
@@ -33,8 +33,7 @@ export default function Intro() {
           transition={{ delay: 0.25, duration: 0.7 }}
           className="max-w-sm mx-auto mt-8 font-sans text-sm leading-7 text-wedding-dark/75"
         >
-          Con la bendición de Dios y rodeados del cariño de familiares y amigos,
-          queremos invitarlos a celebrar nuestro matrimonio.{" "}
+          Con la bendición de Dios y rodeados del cariño de familiares y amigos, tenemos el honor de invitarles a celebrar nuestro matrimonio.{" "}
         </motion.p>
 
         <motion.h3

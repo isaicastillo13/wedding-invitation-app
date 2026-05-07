@@ -25,8 +25,8 @@ export default function RSVP({ guest }: { guest: any }) {
           transition={{ delay: 0.25 }}
           className="max-w-sm mx-auto mt-6 text-sm leading-7 text-wedding-dark/70"
         >
-          Con mucha ilusión esperamos contar con su presencia. Por favor
-          confirmar asistencia antes del 28 de mayo.
+          Con gran ilusión, esperamos contar con su presencia. Agradecemos
+          confirmar su asistencia antes del 28 de mayo.
         </motion.p>
 
         <motion.div
@@ -36,7 +36,7 @@ export default function RSVP({ guest }: { guest: any }) {
           transition={{ delay: 0.25 }}
           className="max-w-sm mx-auto mt-6 text-center text-wedding-dark/70"
         >
-          <p className="text-sm leading-7">Hemos reservado para usted</p>
+          <p className="text-sm leading-7">Hemos reservado para usted(es):</p>
 
           {guest && (
             <h2 className="mt-3 font-serif text-4xl leading-tight text-wedding-dark">
@@ -56,7 +56,9 @@ export default function RSVP({ guest }: { guest: any }) {
           className="mt-10 space-y-4 text-left"
         >
           <select className="w-full px-5 py-4 text-sm border outline-none border-wedding-primary/30 bg-white/70 focus:border-wedding-primary">
-            <option>¿Asistirás?</option>
+            <option disabled selected>
+              Asistencia
+            </option>
             <option>Sí, asistiré</option>
             <option>No podré asistir</option>
           </select>
@@ -64,6 +66,8 @@ export default function RSVP({ guest }: { guest: any }) {
           <input
             type="number"
             placeholder="Cantidad de personas"
+            min={1}
+            max={guest?.passes || 1}
             className="w-full px-5 py-4 text-sm border outline-none border-wedding-primary/30 bg-white/70 placeholder:text-wedding-dark/40 focus:border-wedding-primary"
           />
 

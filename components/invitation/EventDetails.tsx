@@ -16,14 +16,14 @@ export default function EventDetails() {
           transition={{ delay: 0.15 }}
           className="mt-4 font-serif text-4xl text-center"
         >
-          Ceremonia religiosa <br /> y recepción
+          Ceremonia Religiosa <br /> y Recepción
         </motion.h2>
 
         <p className="mt-8 text-xs uppercase tracking-[0.35em] text-wedding-dark/75 text-center">
           27 · 06 · 2026
         </p>
         <p className="mt-2 text-xs uppercase tracking-[0.35em] text-wedding-dark/75 text-center">
-          4:30 p.m
+          4:30 P.M.
         </p>
 
         <div className="mt-10 space-y-4">
@@ -61,8 +61,7 @@ export default function EventDetails() {
             </p>
 
             <p className="mt-3 text-sm leading-6 text-wedding-dark/70">
-              Para mayor comodidad y facilidad de acceso, te sugerimos llegar en
-              Uber.
+              Para su mayor comodidad y facilidad de acceso, le recomendamos utilizar Uber para su llegada.
             </p>
           </div>
           <div className="mx-auto mb-6 max-w-65 opacity-80">
@@ -90,7 +89,7 @@ export default function EventDetails() {
                 target="_blank"
                 className="mt-10 block bg-wedding-primary px-8 py-4 text-center text-[11px] uppercase tracking-[0.3em] text-white transition hover:opacity-90"
               >
-                Inspo
+                Referencia
               </a>
             </div>
           </div>

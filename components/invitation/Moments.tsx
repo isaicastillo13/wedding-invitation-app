@@ -17,7 +17,7 @@ export default function Moments() {
         className="object-cover w-full"
       />
       <img
-        src="/images/DSC02650.jpg"
+        src="/images/DSC02633.jpg"
         alt="Momento 2"
         className="object-cover w-full"
       />
