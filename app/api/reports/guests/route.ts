@@ -31,11 +31,14 @@ export async function GET() {
     }));
 
     return NextResponse.json(report);
-  } catch (error) {
-    console.error(error);
+  }   catch (error) {
+    console.error("REPORT_ERROR:", error);
 
     return NextResponse.json(
-      { error: "Error generando reporte" },
+      {
+        error: "Error generando reporte",
+        detail: error instanceof Error ? error.message : String(error),
+      },
       { status: 500 }
     );
   }
