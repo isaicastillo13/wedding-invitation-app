@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { syncGoogleSheet } from "@/lib/syncGoogleSheet";
 
 export async function POST(req: Request) {
   try {
@@ -55,6 +56,20 @@ export async function POST(req: Request) {
         confirmedAt: attending ? new Date() : null,
         declinedAt: attending ? null : new Date(),
       },
+    });
+
+    await syncGoogleSheet({
+      Nombre: guest.name,
+      "Puestos Asignados": guest.passes,
+      Estado: attending ? "confirmed" : "declined",
+      "Abrio Invitacion": guest.hasOpened ? "Sí" : "No",
+      "Fecha Apertura": guest.openedAt ? guest.openedAt.toISOString() : "",
+      Asistencia: attending ? "Sí" : "No",
+      "Puestos Confirmados": attending ? attendeesCount : 0,
+      Mensaje: message || "",
+      "Fecha Respuesta": new Date().toISOString(),
+      Token: guest.token,
+      Link: `${process.env.NEXT_PUBLIC_APP_URL}/i/${guest.token}`,
     });
 
     return NextResponse.json({
