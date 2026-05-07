@@ -45,7 +45,7 @@ export default function Gifts() {
           <GiftCard title="Cuenta bancaria">
             <p>George Salazar o Yasmin Caicedo</p>
             <p>Banco General</p>
-            <p>Cuenta de ahorros</p>
+            <p>Cuenta de Ahorros</p>
             <p>04-29-96-361672-0</p>
 
             <CopyButton

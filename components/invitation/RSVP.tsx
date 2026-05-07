@@ -36,7 +36,7 @@ export default function RSVP({ guest }: { guest: any }) {
           transition={{ delay: 0.25 }}
           className="max-w-sm mx-auto mt-6 text-center text-wedding-dark/70"
         >
-          <p className="text-sm leading-7">Hemos reservado para usted(es):</p>
+          <p className="text-sm leading-7">Hemos reservado para <span className="font-bold">{guest.name}</span></p>
 
           {guest && (
             <h2 className="mt-3 font-serif text-4xl leading-tight text-wedding-dark">
