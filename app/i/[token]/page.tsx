@@ -7,6 +7,7 @@ import RSVP from "@/components/invitation/RSVP";
 import Gifts from "@/components/invitation/Gifts";
 import Closing from "@/components/invitation/Closing";
 import Moments from "@/components/invitation/Moments";
+import { syncGoogleSheet } from "@/lib/syncGoogleSheet";
 
 export default async function InvitationPage({
   params,
@@ -17,6 +18,9 @@ export default async function InvitationPage({
 
   const guest = await prisma.guest.findUnique({
     where: { token },
+    include: {
+      rsvp: true,
+    },
   });
 
   if (!guest) {
@@ -33,13 +37,35 @@ export default async function InvitationPage({
   }
 
   if (!guest.hasOpened) {
+    const openedAt = new Date();
+
     await prisma.guest.update({
       where: { id: guest.id },
       data: {
         hasOpened: true,
-        openedAt: new Date(),
+        openedAt,
         status: "opened",
       },
+    });
+
+    await syncGoogleSheet({
+      Nombre: guest.name,
+      "Puestos Asignados": guest.passes,
+      Estado: "opened",
+      "Abrio Invitacion": "Sí",
+      "Fecha Apertura": openedAt.toISOString(),
+      Asistencia: guest.rsvp
+        ? guest.rsvp.attending
+          ? "Sí"
+          : "No"
+        : "Sin respuesta",
+      "Puestos Confirmados": guest.rsvp?.attendeesCount ?? 0,
+      Mensaje: guest.rsvp?.message ?? "",
+      "Fecha Respuesta": guest.rsvp?.createdAt
+        ? guest.rsvp.createdAt.toISOString()
+        : "",
+      Token: guest.token,
+      Link: `${process.env.NEXT_PUBLIC_APP_URL}/i/${guest.token}`,
     });
   }
 
